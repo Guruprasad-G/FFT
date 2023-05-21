@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import {AppBar, Button, Box, Container, CssBaseline, createTheme, IconButton, Menu, MenuItem, ThemeProvider, Toolbar, Typography } from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu';
+import { AppBar, Button, Box, Container, CssBaseline, createMuiTheme, IconButton, Menu, MenuItem, MuiThemeProvider, Toolbar, Typography } from '@material-ui/core';
+import MenuIcon from '@material-ui/core/Menu'
+import Brightness4Icon from '@material-ui/core/Icon/'
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 
 const pages = [];
-const darkTheme = createTheme({ palette: { mode: 'dark'}});
-const lightTheme = createTheme({ palette: { mode: 'light'}});
+const darkTheme = createMuiTheme({ palette: { mode: 'dark'}});
+const lightTheme = createMuiTheme({ palette: { mode: 'light'}});
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -22,7 +23,7 @@ function NavBar() {
 
   return (
     <>
-    <ThemeProvider theme={theme}>
+    <MuiThemeProvider theme={theme}>
       <CssBaseline />
     <AppBar enableColorOnDark color='primary'>
       <Container maxWidth="s">
@@ -63,7 +64,7 @@ function NavBar() {
         </Toolbar>
       </Container>
     </AppBar>
-    </ThemeProvider>
+    </MuiThemeProvider>
     </>
   );
 }
