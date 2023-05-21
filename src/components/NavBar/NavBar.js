@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { AppBar, Button, Box, Container, CssBaseline, createMuiTheme, IconButton, Menu, MenuItem, MuiThemeProvider, Toolbar, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/core/Menu'
-import Brightness4Icon from '@material-ui/core/Icon/'
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
+import LightIcon from '../../light-icon.png'
+import DarkIcon from '../../dark-icon.png'
 
 const pages = [];
 const darkTheme = createMuiTheme({ palette: { mode: 'dark'}});
@@ -59,7 +58,7 @@ function NavBar() {
             ))}
           </Box>
           <IconButton sx={{ ml: 1 }} onClick={() => {theme === darkTheme ? switchtheme(lightTheme) : switchtheme(darkTheme)}} color="inherit">
-        {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+        {theme.palette.mode === 'dark' ? <img src={DarkIcon} alt="DarkThemeIcon" /> :<img src={LightIcon} alt="LightThemeIcon" />}
       </IconButton>
         </Toolbar>
       </Container>
