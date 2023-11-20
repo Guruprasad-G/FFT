@@ -7,7 +7,7 @@ function App() {
     <>
       <NavBar></NavBar>
       <container style={{ marginTop: '7%' }}>
-        <MainPage></MainPage>
+        {/* <MainPage></MainPage> */}
       </container>
     </>
   );
