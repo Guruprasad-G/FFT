@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import { AppBar, Button, Box, Container, CssBaseline, createMuiTheme, IconButton, Menu, MenuItem, MuiThemeProvider, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Button, Box, Container, CssBaseline, createTheme, IconButton, Menu, MenuItem, MuiThemeProvider, Toolbar, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/core/Menu'
 import LightIcon from '../../light-icon.png'
 import DarkIcon from '../../dark-icon.png'
 
 const pages = [];
-const darkTheme = createMuiTheme({ palette: { mode: 'dark'}});
-const lightTheme = createMuiTheme({ palette: { mode: 'light'}});
+const darkTheme = createTheme({ palette: { mode: 'dark'}});
+const lightTheme = createTheme({ palette: { mode: 'light'}});
 
 function NavBar() {
-  const [anchorElNav, setAnchorElNav] = useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(true);
   const [theme,switchtheme] = useState(lightTheme);
 
   const handleOpenNavMenu = (event) => {
@@ -25,14 +25,14 @@ function NavBar() {
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
     <AppBar enableColorOnDark color='primary'>
-      <Container maxWidth="s">
+      <Container maxWidth="sm">
         <Toolbar disableGutters>
           <Typography variant="h6" noWrap component="a" href="/"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit', textDecoration: 'none',}}>
             Butterfly
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton size="large" aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu} color="inherit">
+            <IconButton size="medium" aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu} color="inherit">
               <MenuIcon/>
             </IconButton>
             <Menu id="menu-appbar" anchorEl={anchorElNav} anchorOrigin={{ vertical: 'bottom', horizontal: 'left', }}
