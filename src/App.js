@@ -1,11 +1,14 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
+import MainPage from './components/MainPage/MainPage';
 
 function App() {
   return (
     <>
       <NavBar></NavBar>
-      <h1 style={{ marginTop: '7%' }}>Hi There</h1>
+      <container style={{ marginTop: '7%' }}>
+        <MainPage></MainPage>
+      </container>
     </>
   );
 }

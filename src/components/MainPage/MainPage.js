@@ -3,14 +3,15 @@ import { Butterfly } from './Butterfly'
 import { Point8DIFFFTorDITIFFT, Point8DITFFTorDIFIFFT } from './EightPoint'
 import { Point4DIFFFTorDITIFFT, Point4DITFFTorDIFIFFT } from './FourPoint'
 import { complex, conj, multiply, sqrt } from 'mathjs'
-import { Alert, AlertTitle, Button, Card, CircularProgress, Container, CardMedia, Grid, Paper, useMediaQuery, experimentalStyled as styled } from '@mui/material'
+import { Button, Card, CircularProgress, Container, CardMedia, Grid, Paper, useMediaQuery, experimentalStyled as styled } from '@material-ui/core'
 
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(2),
-    textAlign: 'center',
-}));
+// const Item = 
+// (Paper)(({ theme }) => ({
+//     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+//     ...theme.typography.body2,
+//     padding: theme.spacing(2),
+//     textAlign: 'center',
+// }));
 
 const Userinputform1 = ({ onChange }) => {
     return (
@@ -80,9 +81,9 @@ const Submission = ({onSubmit, errors}) => {
     return (
         <>
         <br></br>
-        {errors ? <Alert severity="error">
-                        <AlertTitle>{errors}</AlertTitle>
-                    </Alert> : null}
+        {errors ? 
+                        <p>{errors}</p>
+                     : null}
         <Button onClick={onSubmit} style={{ align: "center", marginTop:"5%", alignItems: 'center', justifyContent: 'center' }} variant="contained">Submit</Button>
         </>
     )
@@ -204,10 +205,10 @@ const MainPage = () => {
                 <Container style={{ height: "100%", width: "60%", sx: "auto", md: "auto" }}>
                     <Card style={{ height: "50%", marginTop: "2%", paddingTop: "2%", sx: "auto", md: "auto" }}>
                         <Userinputform1 onChange={onChange}></Userinputform1>
-                        <Item>
+                        {/* <Item> */}
                             <Userinputform2 points={points} onChange={onChange} field1={field1}></Userinputform2>
                             <Submission onSubmit={onSubmit} errors={errors}></Submission>
-                        </Item>
+                        {/* </Item> */}
                     </Card>
                     <br></br>
                     <Card style={{ height: "100%", width:"100%",alignItems: "center", justifyContent: "center" }}>
@@ -230,10 +231,10 @@ const MainPage = () => {
                     <Card style={{ height: "100%", marginTop: "2%", paddingTop: "2%", sx: "auto", md: "auto" }}>
                         <Userinputform1 onChange={onChange}></Userinputform1>
                     </Card>
-                    <Item>
+                    {/* <Item> */}
                         <Userinputform2 points={points} onChange={onChange} field1={field1}></Userinputform2>
                         <Submission onSubmit={onSubmit} errors={errors}></Submission>
-                    </Item>
+                    {/* </Item> */}
                 </Container>
                 <br></br>
                 <Advertisement height="250px" width="250px"></Advertisement>
