@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <NavBar></NavBar>
-      <h1>Hi There</h1>
+      <h1 style={{ marginTop: '7%' }}>Hi There</h1>
     </>
   );
 }
