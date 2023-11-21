@@ -51,7 +51,8 @@ const Advertisement = ({height, width}) => {
     const [hasError, setHasError] = useState(false);
     return (
         <Container style={{height:height, width:width, padding:"0"}} >
-        { hasError ? <p>The iframe could not be loaded.</p> : loading ? <div style={{ alignItems: "center", justifyContent: "center" }}><CircularProgress></CircularProgress></div> : <CardMedia style={{ height: "100%", width: "100%", padding: "0" }} component="iframe" src="https://www.youtube.com/embed/ziQ9GURNrUg/" onError={(e) => {setHasError(true)}} onLoad={() => setLoading(false)}></CardMedia> }
+        { hasError ? <p>The iframe could not be loaded.</p> : loading ? <div style={{ alignItems: "center", justifyContent: "center" }}>
+            <CircularProgress></CircularProgress></div> : <CardMedia style={{ height: "100%", width: "100%", padding: "0" }} component="iframe" src="https://www.youtube.com/embed/ziQ9GURNrUg/" onError={(e) => {setHasError(true)}} onLoad={() => setLoading(false)}></CardMedia> }
         </Container>
     )
 }
