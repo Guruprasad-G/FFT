@@ -39,69 +39,69 @@ const Userinputform1 = ({ onChange }) => {
     )
 }
 
-const Advertisement = ({height, width}) => {
-    const [loading, setLoading] = useState(true);
-    const [hasError, setHasError] = useState(false);
-    return (
-<Container style={{ height: height, width: width, padding: "0" }}>
-  {hasError ? (
-    <p>The iframe could not be loaded.</p>
-  ) : loading ? (
-    <div style={{ alignItems: "center", justifyContent: "center" }}>
-      <Spinner animation="border" role="status">
-        <span className="visually-hidden">Loading...</span>
-      </Spinner>
-    </div>
-  ) : (
-    <Card style={{ height: "100%", width: "100%", padding: "0" }}>
-      <Card.Img>
-      <iframe title="Embedded Video" src="https://www.youtube.com/embed/ziQ9GURNrUg/" style={{ height: "100%", width: "100%" }} onError={(e) => { setHasError(true); }} onLoad={() => setLoading(false)} ></iframe>
-      </Card.Img>
-    </Card>
-  )}
-</Container>
+// const Advertisement = ({height, width}) => {
+//     const [loading, setLoading] = useState(true);
+//     const [hasError, setHasError] = useState(false);
+//     return (
+// <Container style={{ height: height, width: width, padding: "0" }}>
+//   {hasError ? (
+//     <p>The iframe could not be loaded.</p>
+//   ) : loading ? (
+//     <div style={{ alignItems: "center", justifyContent: "center" }}>
+//       <Spinner animation="border" role="status">
+//         <span className="visually-hidden">Loading...</span>
+//       </Spinner>
+//     </div>
+//   ) : (
+//     <Card style={{ height: "100%", width: "100%", padding: "0" }}>
+//       <Card.Img>
+//       <iframe title="Embedded Video" src="https://www.youtube.com/embed/ziQ9GURNrUg/" style={{ height: "100%", width: "100%" }} onError={(e) => { setHasError(true); }} onLoad={() => setLoading(false)} ></iframe>
+//       </Card.Img>
+//     </Card>
+//   )}
+// </Container>
 
-    )
-}
+//     )
+// }
 
-const Userinputform2 = ({points, onChange, field1}) => {
-    return (
-        <>
-        {
-            points ? points.map((numobject) => {
-                return (
-                    <Container style={{ alignItems: "center", justifyContent: "center" }}>
-  <Row>
-    <Col xs="auto" md="auto">
-      <br />
-      <Form.Label>{`x(${numobject.index}) = `}</Form.Label>
-      <Form.Control type="number" name="realinput" defaultValue={0} onChange={onChange} id={numobject.index}/>
-      {!field1.transform ? (
-        <> + <Form.Control type="number" name="imginput" defaultValue={0} onChange={onChange} id={numobject.index}/>
-          <button disabled style={{ color: "black" }}>i</button>
-        </>
-      ) : null}
-    </Col>
-  </Row>
-</Container>
-                )
-            }) : null
-        }
-        </>
-    )
-}
+// const Userinputform2 = ({points, onChange, field1}) => {
+//     return (
+//         <>
+//         {
+//             points ? points.map((numobject) => {
+//                 return (
+//                     <Container style={{ alignItems: "center", justifyContent: "center" }}>
+//   <Row>
+//     <Col xs="auto" md="auto">
+//       <br />
+//       <Form.Label>{`x(${numobject.index}) = `}</Form.Label>
+//       <Form.Control type="number" name="realinput" defaultValue={0} onChange={onChange} id={numobject.index}/>
+//       {!field1.transform ? (
+//         <> + <Form.Control type="number" name="imginput" defaultValue={0} onChange={onChange} id={numobject.index}/>
+//           <button disabled style={{ color: "black" }}>i</button>
+//         </>
+//       ) : null}
+//     </Col>
+//   </Row>
+// </Container>
+//                 )
+//             }) : null
+//         }
+//         </>
+//     )
+// }
 
-const Submission = ({onSubmit, errors}) => {
-    return (
-        <>
-        <br></br>
-        {errors ? 
-                        <p>{errors}</p>
-                     : null}
-        <Button onClick={onSubmit} style={{ align: "center", marginTop:"5%", alignItems: 'center', justifyContent: 'center' }} variant="contained">Submit</Button>
-        </>
-    )
-}
+// const Submission = ({onSubmit, errors}) => {
+//     return (
+//         <>
+//         <br></br>
+//         {errors ? 
+//                         <p>{errors}</p>
+//                      : null}
+//         <Button onClick={onSubmit} style={{ align: "center", marginTop:"5%", alignItems: 'center', justifyContent: 'center' }} variant="contained">Submit</Button>
+//         </>
+//     )
+// }
 
 // const MainPage = () => {
 //     const [field1, updatefield1] = useState({ transform: null, type: null })
@@ -266,6 +266,7 @@ const MainPage = () => {
     return (
         <>
         <h1> Hello there!!</h1>
+        <Userinputform1></Userinputform1>
         </>
     )
 }
