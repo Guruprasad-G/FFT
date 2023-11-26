@@ -3,43 +3,47 @@ import { Butterfly } from './Butterfly'
 import { Point8DIFFFTorDITIFFT, Point8DITFFTorDIFIFFT } from './EightPoint'
 import { Point4DIFFFTorDITIFFT, Point4DITFFTorDIFIFFT } from './FourPoint'
 import { complex, conj, multiply, sqrt } from 'mathjs'
-import { Button, Card, CircularProgress, Container, CardMedia, Grid, useMediaQuery, Paper } from '@material-ui/core'
+import { Button, Card, CircularProgress, Container, CardMedia, Grid, useMediaQuery, Paper, makeStyles } from '@material-ui/core'
 
-const Item = 
-(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(2),
-    textAlign: 'center',
-}));
+// const Item = 
+// (Paper)(({ theme }) => ({
+//     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+//     ...theme.typography.body2,
+//     padding: theme.spacing(2),
+//     textAlign: 'center',
+// }));
+
+// const Item = () => {
+//     return <></>
+// }
 
 const Userinputform1 = ({ onChange }) => {
     return (
         <Container style={{color:"inherit"}}>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                 <Grid item xs={2} sm={4} md={4}>
-                    <Item>
+                    {/* <Item> */}
                         <label for="4points"> 4 point Input</label>
                         <input type="radio" value="4" placeholder="DFT" name="points" onChange={onChange} id="4points"></input>
                         <br></br>
                         <label for="8points"> 8 point Input</label>
                         <input type="radio" value="8" placeholder="IDFT" name="points" onChange={onChange} id="8points"></input>
-                        </Item>
+                        {/* </Item> */}
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
-                    <Item>
+                    {/* <Item> */}
                         <label for="FFTtransform">FFT</label>
                         <input type="radio" value="true" placeholder="DFT" name="transform" onChange={onChange} id="FFTtransform"></input>
                         <label for="IFFTtransform">  IFFT</label>
                         <input type="radio" value="false" placeholder="IDFT" name="transform" onChange={onChange} id="IFFTtransform"></input>
-                        </Item>
+                        {/* </Item> */}
                 </Grid>
                 <Grid item xs={2} sm={4} md={4}>
-                    <Item>
+                    {/* <Item> */}
                         <label>Using DIT or DIF</label>
                         <input type="radio" value="true" placeholder="DIT" name="type" onChange={onChange}></input>
                         <input type="radio" value="false" placeholder="DIF" name="type" onChange={onChange}></input>
-                        </Item>
+                        {/* </Item> */}
                 </Grid>
             </Grid>
         </Container>
@@ -206,10 +210,10 @@ const MainPage = () => {
                 <Container style={{ height: "100%", width: "60%", sx: "auto", md: "auto" }}>
                     <Card style={{ height: "50%", marginTop: "2%", paddingTop: "2%", sx: "auto", md: "auto" }}>
                         <Userinputform1 onChange={onChange}></Userinputform1>
-                        <Item>
+                        {/* <Item> */}
                             <Userinputform2 points={points} onChange={onChange} field1={field1}></Userinputform2>
                             <Submission onSubmit={onSubmit} errors={errors}></Submission>
-                        </Item>
+                        {/* </Item> */}
                     </Card>
                     <br></br>
                     <Card style={{ height: "100%", width:"100%",alignItems: "center", justifyContent: "center" }}>
@@ -232,10 +236,10 @@ const MainPage = () => {
                     <Card style={{ height: "100%", marginTop: "2%", paddingTop: "2%", sx: "auto", md: "auto" }}>
                         <Userinputform1 onChange={onChange}></Userinputform1>
                     </Card>
-                    <Item>
+                    {/* <Item> */}
                         <Userinputform2 points={points} onChange={onChange} field1={field1}></Userinputform2>
                         <Submission onSubmit={onSubmit} errors={errors}></Submission>
-                    </Item>
+                    {/* </Item> */}
                 </Container>
                 <br></br>
                 <Advertisement height="250px" width="250px"></Advertisement>
