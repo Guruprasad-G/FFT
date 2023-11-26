@@ -6,38 +6,38 @@ import { complex, conj, multiply, sqrt } from 'mathjs'
 import { Container, Row, Col, Spinner, Card, Button, Form  } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive'
 
-const Userinputform1 = ({ onChange }) => {
-    return (
-        <Container style={{color:"inherit"}}>
-            <Row xs={2} md={3}>
-                <Col xs={4} sm={8} md={12}>
-                    {/* <Item> */}
-                        <label for="4points"> 4 point Input</label>
-                        <input type="radio" value="4" placeholder="DFT" name="points" onChange={onChange} id="4points"></input>
-                        <br></br>
-                        <label for="8points"> 8 point Input</label>
-                        <input type="radio" value="8" placeholder="IDFT" name="points" onChange={onChange} id="8points"></input>
-                        {/* </Item> */}
-                </Col>
-                <Col xs={4} sm={8} md={12}>
-                    {/* <Item> */}
-                        <label for="FFTtransform">FFT</label>
-                        <input type="radio" value="true" placeholder="DFT" name="transform" onChange={onChange} id="FFTtransform"></input>
-                        <label for="IFFTtransform">  IFFT</label>
-                        <input type="radio" value="false" placeholder="IDFT" name="transform" onChange={onChange} id="IFFTtransform"></input>
-                        {/* </Item> */}
-                </Col>
-                <Col xs={4} sm={8} md={12}>
-                    {/* <Item> */}
-                        <label>Using DIT or DIF</label>
-                        <input type="radio" value="true" placeholder="DIT" name="type" onChange={onChange}></input>
-                        <input type="radio" value="false" placeholder="DIF" name="type" onChange={onChange}></input>
-                        {/* </Item> */}
-                </Col>
-            </Row>
-        </Container>
-    )
-}
+// const Userinputform1 = ({ onChange }) => {
+//     return (
+//         <Container style={{color:"inherit"}}>
+//             <Row xs={2} md={3}>
+//                 <Col xs={4} sm={8} md={12}>
+//                     {/* <Item> */}
+//                         <label for="4points"> 4 point Input</label>
+//                         <input type="radio" value="4" placeholder="DFT" name="points" onChange={onChange} id="4points"></input>
+//                         <br></br>
+//                         <label for="8points"> 8 point Input</label>
+//                         <input type="radio" value="8" placeholder="IDFT" name="points" onChange={onChange} id="8points"></input>
+//                         {/* </Item> */}
+//                 </Col>
+//                 <Col xs={4} sm={8} md={12}>
+//                     {/* <Item> */}
+//                         <label for="FFTtransform">FFT</label>
+//                         <input type="radio" value="true" placeholder="DFT" name="transform" onChange={onChange} id="FFTtransform"></input>
+//                         <label for="IFFTtransform">  IFFT</label>
+//                         <input type="radio" value="false" placeholder="IDFT" name="transform" onChange={onChange} id="IFFTtransform"></input>
+//                         {/* </Item> */}
+//                 </Col>
+//                 <Col xs={4} sm={8} md={12}>
+//                     {/* <Item> */}
+//                         <label>Using DIT or DIF</label>
+//                         <input type="radio" value="true" placeholder="DIT" name="type" onChange={onChange}></input>
+//                         <input type="radio" value="false" placeholder="DIF" name="type" onChange={onChange}></input>
+//                         {/* </Item> */}
+//                 </Col>
+//             </Row>
+//         </Container>
+//     )
+// }
 
 // const Advertisement = ({height, width}) => {
 //     const [loading, setLoading] = useState(true);
@@ -266,7 +266,7 @@ const MainPage = () => {
     return (
         <>
         <h1> Hello there!!</h1>
-        <Userinputform1></Userinputform1>
+        {/* <Userinputform1></Userinputform1> */}
         </>
     )
 }
