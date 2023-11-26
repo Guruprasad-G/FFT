@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Butterfly } from './Butterfly'
 import { Point8DIFFFTorDITIFFT, Point8DITFFTorDIFIFFT } from './EightPoint'
 import { Point4DIFFFTorDITIFFT, Point4DITFFTorDIFIFFT } from './FourPoint'
