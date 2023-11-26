@@ -3,7 +3,7 @@ import { Butterfly } from './Butterfly'
 import { Point8DIFFFTorDITIFFT, Point8DITFFTorDIFIFFT } from './EightPoint'
 import { Point4DIFFFTorDITIFFT, Point4DITFFTorDIFIFFT } from './FourPoint'
 import { complex, conj, multiply, sqrt } from 'mathjs'
-import { Button, Card, CircularProgress, Container, CardMedia, Grid, useMediaQuery } from '@material-ui/core'
+import { Button, Card, CircularProgress, Container, CardMedia, Grid, useMediaQuery, Paper } from '@material-ui/core'
 
 const Item = 
 (Paper)(({ theme }) => ({
